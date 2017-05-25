@@ -58,4 +58,6 @@ RUN apt-get update \
 && ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs \
 && apt-get -y install libfontconfig
 
+ENV LANG=C.UTF-8
+
 CMD ["/bin/bash"]
