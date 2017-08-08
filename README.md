@@ -13,8 +13,7 @@ wget -qO- https://get.docker.com/ | sh
  
 ### 撰寫dockerfile
 下載 dockerfile\
-https://hub.docker.com/_/ubuntu/ \ 
-根據 dockerfile 下載需要的 ubuntu 壓縮檔
+https://hub.docker.com/_/ubuntu/
  
 ### python
 RUN apt-get update \
