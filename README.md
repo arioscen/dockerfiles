@@ -1,27 +1,27 @@
 ## dockerfiles
 
-###SSH
+### SSH
 用root權限登入
 apt-get install ssh
 vi /etc/ssh/sshd_config
 PermitRootLogin yes
 /etc/init.d/ssh  restart
  
-###docker
+### docker
 安裝docker
 wget -qO- https://get.docker.com/ | sh
  
-###撰寫dockerfile
+### 撰寫dockerfile
 至https://hub.docker.com/_/ubuntu/下載 dockerfile
  
 根據 dockerfile 下載需要的 ubuntu 壓縮檔
  
-###python
+### python
 RUN apt-get update \
 && apt-get install -y python3 python3-pip wget \
 && pip3 install --upgrade pip \
  
-###爬蟲工具
+### 爬蟲工具
 && pip3 install requests \
 && pip3 install beautifulsoup4 \
 && pip3 install selenium \
@@ -32,7 +32,7 @@ RUN apt-get update \
 && ln -s /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs \
 && apt-get -y install libfontconfig\
  
-###編碼問題
+### 編碼問題
 方法1：增加環境參數至dockerfile
 ENV LANG=C.UTF-8
  
