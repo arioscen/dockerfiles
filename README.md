@@ -1,20 +1,20 @@
 ## dockerfiles
 
 ### SSH
-用root權限登入
-apt-get install ssh
-vi /etc/ssh/sshd_config
-PermitRootLogin yes
-/etc/init.d/ssh  restart
+用root權限登入\
+apt-get install ssh\
+vi /etc/ssh/sshd_config\
+PermitRootLogin yes\
+/etc/init.d/ssh  restart\
  
 ### docker
-安裝docker
-wget -qO- https://get.docker.com/ | sh
+安裝docker\
+wget -qO- https://get.docker.com/ | sh\
  
 ### 撰寫dockerfile
-至https://hub.docker.com/_/ubuntu/下載 dockerfile
- 
-根據 dockerfile 下載需要的 ubuntu 壓縮檔
+下載 dockerfile\
+https://hub.docker.com/_/ubuntu/\ 
+根據 dockerfile 下載需要的 ubuntu 壓縮檔\
  
 ### python
 RUN apt-get update \
@@ -33,12 +33,12 @@ RUN apt-get update \
 && apt-get -y install libfontconfig\
  
 ### 編碼問題
-方法1：增加環境參數至dockerfile
-ENV LANG=C.UTF-8
+方法1：增加環境參數至dockerfile\
+ENV LANG=C.UTF-8\
  
-方法2：在py檔加入
-import sys
-import io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+方法2：在py檔加入\
+import sys\
+import io\
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')\
  
 
